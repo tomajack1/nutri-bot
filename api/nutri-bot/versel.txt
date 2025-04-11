@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "api/nutrientes.py", "use": "@vercel/python" }
+  ],
+  "routes": [
+    { "src": "/api/nutrientes", "dest": "api/nutrientes.py" }
+  ]
+}
