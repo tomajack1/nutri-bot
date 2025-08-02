@@ -64,15 +64,18 @@ export default function Component() {
 
           <Button
             onClick={handleButtonClick}
-            className={`w-full py-6 text-lg font-bold rounded-xl transition-colors flex items-center justify-center gap-2 ${
+            className={`w-full py-6 text-lg font-bold rounded-xl transition-colors flex items-center justify-center animate-pulse-slow gap-0 ${
               isClicked
-                ? "bg-accent-gold text-white hover:bg-accent-gold/90 animate-shake" // Added animate-shake
+                ? "bg-accent-gold text-white hover:bg-accent-gold/90 animate-shake"
                 : "bg-accent-gold text-white hover:bg-accent-gold/90"
-            }`}
+            } flex-col`} // Added flex-col to stack content vertically
           >
-            <Sparkles className="h-5 w-5 text-accent-gold" />
-            QUERO GARANTIR MEU LUGAR
-            <ArrowRight className="h-5 w-5 ml-2" />
+            <div className="flex items-center justify-center gap-2 text-purple-darker">
+              <Sparkles className="h-5 w-5 text-purple-darker" />
+              QUERO GARANTIR MEU LUGAR
+              <ArrowRight className="h-5 w-5 ml-2" />
+            </div>
+            <span className="text-xs mt-1 text-violet-950">Toque para continuar</span>
           </Button>
 
           {isClicked && <p className="text-xs text-white text-center mt-2">Avançando para próxima etapa...</p>}

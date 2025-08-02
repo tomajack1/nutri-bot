@@ -88,11 +88,17 @@ const config = {
           "20%, 60%": { transform: "translateX(-3px)" },
           "40%, 80%": { transform: "translateX(3px)" },
         },
+        "pulse-slow": {
+          // New keyframe for slow pulse
+          "0%, 100%": { transform: "scale(1)" },
+          "50%": { transform: "scale(1.02)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         shake: "shake 0.5s cubic-bezier(.36,.07,.19,.97) both",
+        "pulse-slow": "pulse-slow 1.5s ease-in-out infinite", // Changed from 2s to 1.5s
       },
     },
   },
