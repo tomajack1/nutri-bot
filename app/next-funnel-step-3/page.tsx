@@ -92,15 +92,15 @@ export default function FunnelStep3Page() {
 
           <Button
             onClick={handleContinueClick}
-            className={`w-full py-6 text-lg font-bold rounded-xl transition-colors flex items-center justify-center gap-2 mt-6 ${
+            className={`w-full py-6 text-lg font-bold rounded-xl transition-colors flex items-center justify-center gap-2 animate-pulse-slow ${
               isContinuing
-                ? "bg-accent-gold text-white hover:bg-accent-gold/90"
-                : "bg-accent-gold text-white hover:bg-accent-gold/90"
+                ? "bg-accent-gold text-purple-darker hover:bg-accent-gold/90" // Changed text color to purple-darker
+                : "bg-accent-gold text-purple-darker hover:bg-accent-gold/90" // Changed text color to purple-darker
             }`}
           >
-            <Heart className="h-5 w-5" />
+            <Heart className="h-5 w-5 text-purple-darker" /> {/* Changed icon color to purple-darker */}
             CONTINUAR
-            <ArrowRight className="h-5 w-5 ml-2" />
+            <ArrowRight className="h-5 w-5 ml-2 text-purple-darker" /> {/* Changed icon color to purple-darker */}
           </Button>
 
           {isContinuing && <p className="text-xs text-white text-center mt-2">Avançando para próxima etapa...</p>}

@@ -52,13 +52,13 @@ export default function FunnelStep4Page() {
             <Button
               key={index}
               onClick={() => handleOptionClick(index)}
-              className={`w-full py-6 text-sm font-medium rounded-xl transition-colors text-left px-3 ${
+              className={`w-full py-6 text-sm font-medium rounded-xl transition-colors text-left px-3 flex items-center justify-center animate-pulse-slow ${
                 selectedOption === index
                   ? "bg-accent-gold text-white hover:bg-accent-gold/90"
                   : "bg-purple-light text-white hover:bg-purple-light/90"
               }`}
             >
-              <span dangerouslySetInnerHTML={{ __html: text }} />
+              <span dangerouslySetInnerHTML={{ __html: text }} className="text-center" />
             </Button>
           ))}
 

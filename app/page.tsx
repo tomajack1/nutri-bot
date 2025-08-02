@@ -1,22 +1,13 @@
 "use client" // Converted to Client Component
 
 import Image from "next/image"
-import { useState } from "react" // Import useState
 import { useRouter } from "next/navigation" // Import useRouter
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Heart, Sparkles, Plus, ArrowRight, Clock } from "lucide-react"
 
 export default function Component() {
-  const [isClicked, setIsClicked] = useState(false) // State to track if button is clicked
   const router = useRouter() // Initialize useRouter
-
-  const handleButtonClick = () => {
-    setIsClicked(true)
-    setTimeout(() => {
-      router.push("/next-funnel-step")
-    }, 300) // 300ms delay for effect
-  }
 
   return (
     <div className="relative flex min-h-screen items-center justify-center bg-purple-dark p-4 overflow-hidden">
@@ -63,22 +54,13 @@ export default function Component() {
           </div>
 
           <Button
-            onClick={handleButtonClick}
-            className={`w-full py-6 text-lg font-bold rounded-xl transition-colors flex items-center justify-center animate-pulse-slow gap-0 ${
-              isClicked
-                ? "bg-accent-gold text-white hover:bg-accent-gold/90 animate-shake"
-                : "bg-accent-gold text-white hover:bg-accent-gold/90"
-            } flex-col`} // Added flex-col to stack content vertically
+            onClick={() => router.push("/next-funnel-step")}
+            className={`w-full py-6 text-lg font-bold rounded-xl transition-colors flex items-center justify-center gap-2 animate-pulse-slow bg-accent-gold text-purple-darker hover:bg-accent-gold/90`}
           >
-            <div className="flex items-center justify-center gap-2 text-purple-darker">
-              <Sparkles className="h-5 w-5 text-purple-darker" />
-              QUERO GARANTIR MEU LUGAR
-              <ArrowRight className="h-5 w-5 ml-2" />
-            </div>
-            <span className="text-xs mt-1 text-violet-950">Toque para continuar</span>
+            <Sparkles className="h-5 w-5 text-purple-darker" />
+            QUERO GARANTIR MEU LUGAR
+            <ArrowRight className="h-5 w-5 ml-2 text-purple-darker" />
           </Button>
-
-          {isClicked && <p className="text-xs text-white text-center mt-2">Avançando para próxima etapa...</p>}
 
           <p className="text-xs text-white flex items-center gap-1">
             <Clock className="h-3 w-3" />

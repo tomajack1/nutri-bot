@@ -50,14 +50,13 @@ export default function FunnelStep7Page() {
             <Button
               key={index}
               onClick={() => handleOptionClick(index)}
-              className={`w-full py-4 text-sm font-medium rounded-xl transition-colors flex items-center justify-center ${
-                // Changed text-base to text-sm and added justify-center
+              className={`w-full py-4 text-sm font-medium rounded-xl transition-colors flex items-center justify-center animate-pulse-slow ${
                 selectedOption === index
                   ? "bg-accent-gold text-white hover:bg-accent-gold/90"
                   : "bg-purple-light text-white hover:bg-purple-light/90"
               }`}
             >
-              {text}
+              <span className="text-center">{text}</span>
             </Button>
           ))}
 

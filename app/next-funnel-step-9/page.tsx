@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import Link from "next/link" // Import Link
+import Link from "next/link"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Heart, Sparkles, Plus, Check, Gift, Flame, ArrowRight } from "lucide-react"
@@ -183,7 +183,7 @@ export default function FunnelStep9Page() {
 
           {/* Main Call-to-Action Button */}
           <Link href="https://go.disruptybr.com.br/lad0daee9m" passHref legacyBehavior>
-            <Button className="w-full py-6 text-lg font-bold rounded-xl bg-accent-gold text-white hover:bg-accent-gold/90 transition-colors flex items-center justify-center gap-2">
+            <Button className="w-full py-6 text-lg font-bold rounded-xl bg-accent-gold hover:bg-accent-gold/90 transition-colors flex items-center justify-center gap-2 animate-pulse-slow text-purple-darker">
               <Heart className="h-5 w-5" />
               <Flame className="h-5 w-5" />
               EU QUERO PARTICIPAR!

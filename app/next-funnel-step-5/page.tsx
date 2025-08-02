@@ -14,6 +14,12 @@ interface TestimonialProps {
   likes: number
 }
 
+const testimonials = [
+  { stars: 5, quote: "A transformação foi incrível!", author: "João", age: 30, likes: 120 },
+  { stars: 4, quote: "Estou muito feliz com o resultado.", author: "Maria", age: 25, likes: 95 },
+  { stars: 5, quote: "Minha vida mudou para melhor.", author: "Carlos", age: 40, likes: 150 },
+]
+
 function TestimonialCard({ stars, quote, author, age, likes }: TestimonialProps) {
   return (
     <div className="relative w-full p-4 rounded-xl bg-purple-light text-white shadow-md">
@@ -40,30 +46,6 @@ function TestimonialCard({ stars, quote, author, age, likes }: TestimonialProps)
 export default function FunnelStep5Page() {
   const [isContinuing, setIsContinuing] = useState(false)
   const router = useRouter()
-
-  const testimonials = [
-    {
-      stars: 5,
-      quote: "Em 10 dias minha ansiedade caiu 80% – hoje durmo em paz!",
-      author: "Mariana",
-      age: 42,
-      likes: 2134,
-    },
-    {
-      stars: 5,
-      quote: "Recuperei a confiança no meu casamento e vi milagres financeiros.",
-      author: "Patrícia",
-      age: 38,
-      likes: 1852,
-    },
-    {
-      stars: 5,
-      quote: "Jamais imaginei... Arcanjo Miguel me deu clareza para meu negócio crescer 3x.",
-      author: "Cláudia",
-      age: 46,
-      likes: 2007,
-    },
-  ]
 
   const handleContinueClick = () => {
     setIsContinuing(true)
@@ -98,15 +80,15 @@ export default function FunnelStep5Page() {
 
           <Button
             onClick={handleContinueClick}
-            className={`w-full py-6 text-lg font-bold rounded-xl transition-colors flex items-center justify-center gap-2 mt-6 ${
+            className={`w-full py-6 text-lg font-bold rounded-xl transition-colors flex items-center justify-center gap-2 animate-pulse-slow ${
               isContinuing
-                ? "bg-accent-gold text-white hover:bg-accent-gold/90"
-                : "bg-accent-gold text-white hover:bg-accent-gold/90"
+                ? "bg-accent-gold text-purple-darker hover:bg-accent-gold/90" // Changed text color to purple-darker
+                : "bg-accent-gold text-purple-darker hover:bg-accent-gold/90" // Changed text color to purple-darker
             }`}
           >
-            <Heart className="h-5 w-5" />
+            <Heart className="h-5 w-5 text-purple-darker" /> {/* Changed icon color to purple-darker */}
             CONTINUAR
-            <ArrowRight className="h-5 w-5 ml-2" />
+            <ArrowRight className="h-5 w-5 ml-2 text-purple-darker" /> {/* Changed icon color to purple-darker */}
           </Button>
 
           {isContinuing && <p className="text-xs text-white text-center mt-2">Avançando para próxima etapa...</p>}

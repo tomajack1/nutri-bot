@@ -67,7 +67,7 @@ export default function FunnelStep8Page() {
           <p className="text-sm text-white text-center">Consultando a sabedoria celestial...</p>
 
           <Button
-            className="w-full py-4 text-sm font-medium rounded-xl bg-purple-light text-white hover:bg-purple-light/90 transition-colors flex items-center justify-center gap-2"
+            className="w-full py-4 text-sm font-medium rounded-xl bg-purple-light text-white hover:bg-purple-light/90 transition-colors flex items-center justify-center gap-2 animate-pulse-slow"
             disabled // Disable button as it's a loading screen
           >
             <Sparkles className="h-4 w-4 text-accent-gold" />
