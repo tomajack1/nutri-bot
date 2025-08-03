@@ -11,10 +11,10 @@ export default function FunnelStepPage() {
   const router = useRouter()
 
   const options = [
-    "Culpa que me impede de perdoar",
-    "Medo de não ser ouvida por Deus",
-    "Ansiedade financeira que me sufoca",
-    "Solidão no casamento ou na família",
+    "💔 Culpa que me impede de perdoar",
+    "😨 Medo de não ser ouvida por Deus",
+    "💸 Ansiedade financeira que me sufoca",
+    "😔 Solidão no casamento ou na família",
   ]
 
   const handleOptionClick = (index: number) => {
@@ -45,6 +45,9 @@ export default function FunnelStepPage() {
         </CardHeader>
         <CardContent className="flex flex-col items-center p-6 pt-0 space-y-4">
           <h2 className="text-xl font-bold text-center mt-4">Qual é a maior ferida em seu coração hoje?</h2>
+          <p className="text-sm text-center leading-relaxed text-yellow-300">
+            Escolha uma opção para continuar sua jornada de fé e transformação.
+          </p>
 
           {options.map((text, index) => (
             <Button

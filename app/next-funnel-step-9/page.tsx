@@ -5,8 +5,17 @@ import Link from "next/link"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Heart, Sparkles, Plus, Check, Gift, Flame, ArrowRight } from "lucide-react"
+import { useRef } from "react" // Import useRef
 
 export default function FunnelStep9Page() {
+  const mainCtaRef = useRef<HTMLButtonElement>(null) // Create a ref for the main CTA button
+
+  const scrollToMainCta = () => {
+    if (mainCtaRef.current) {
+      mainCtaRef.current.scrollIntoView({ behavior: "smooth", block: "center" }) // Scroll to the main CTA
+    }
+  }
+
   return (
     <div className="relative flex min-h-screen items-center justify-center bg-purple-dark p-4 overflow-hidden">
       {/* Decorative circles */}
@@ -17,14 +26,24 @@ export default function FunnelStep9Page() {
         <CardHeader className="relative flex flex-col items-center p-6 pb-4 space-y-4">
           <div className="flex items-center space-x-2 rounded-full px-4 py-2 mt-4 bg-purple-darker">
             <Heart className="h-5 w-5 text-accent-gold" />
-            <Plus className="h-5 w-5 text-accent-gold" />
-            <Sparkles className="h-5 w-5 text-accent-gold" />
+            <Plus className="h-5 w-5" />
+            <Sparkles className="h-5 w-5" />
           </div>
-          <h1 className="text-xl font-bold text-center leading-relaxed mt-4 text-accent-gold">
-            Sua vaga na Quaresma está <br /> disponível!
+          <h1 className="text-xl font-bold text-center leading-relaxed mt-4 uppercase text-accent-gold">
+            Últimas Vagas Para a Corrente de Oração da Quaresma
           </h1>
         </CardHeader>
         <CardContent className="flex flex-col items-center p-6 pt-0 space-y-6">
+          {/* Novo botão adicionado aqui */}
+          <Button
+            onClick={scrollToMainCta}
+            className="w-full py-4 text-lg font-bold rounded-xl bg-accent-gold hover:bg-accent-gold/90 transition-colors flex items-center justify-center gap-2 animate-pulse-slow text-purple-darker"
+          >
+            <Sparkles className="h-5 w-5" />
+            QUERO RECEBER ESSA BENÇÃO
+            <ArrowRight className="h-5 w-5 ml-2" />
+          </Button>
+
           {/* Welcome/Context Section */}
           <div className="w-full p-4 rounded-xl bg-purple-light text-center space-y-2 text-sm">
             <p className="text-left">
@@ -38,28 +57,18 @@ export default function FunnelStep9Page() {
               <span className="font-semibold text-accent-gold">cura física completa</span> que você tanto deseja!
             </p>
             <p className="text-left font-semibold mt-4 text-accent-gold">Em 40 dias você vai:</p>
-            <ul className="list-none pl-0 text-left space-y-1">
+            <ul className="list-none pl-0 text-left space-y-2">
               <li className="flex items-start gap-2">
-                <span className="text-pink-accent mt-1">•</span>
-                <span>
-                  Eliminar de vez a{" "}
-                  <span className="font-semibold text-accent-gold">solidão no casamento e na família</span> com rituais
-                  sagrados
-                </span>
+                <span className="text-accent-gold mt-1">✅</span>
+                <span>Reconstruir laços no casamento e na família com rituais que unem corações</span>
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-pink-accent mt-1">•</span>
-                <span>
-                  Vencer o seu bloqueio de{" "}
-                  <span className="font-semibold text-accent-gold">não ter um guia espiritual</span> a cada nova etapa
-                </span>
+                <span className="text-accent-gold mt-1">✅</span>
+                <span>Quebrar de vez os bloqueios que te afastam da presença de Deus</span>
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-pink-accent mt-1">•</span>
-                <span className="">
-                  Receber a bênção da <span className="font-semibold text-accent-gold">cura física completa</span> e
-                  sentir uma explosão de fé
-                </span>
+                <span className="text-accent-gold mt-1">✅</span>
+                <span className="">Receber a bênção da cura física e espiritual que transforma vidas</span>
               </li>
             </ul>
           </div>
@@ -78,14 +87,20 @@ export default function FunnelStep9Page() {
               ></iframe>
             </div>
             <div className="p-3 text-center text-white text-sm">
-              <p className="font-semibold">Explanation of the 40 Days with Saint Michael the Archangel 2025</p>
-              <p className="text-xs">Frei Gilson / Som do Monte - OFICIAL</p>
-
               <p className="text-xs text-accent-gold mt-2 flex items-center justify-center gap-1">
                 <Sparkles className="h-3 w-3" />O Frei tem uma mensagem para você!
               </p>
             </div>
           </div>
+
+          <Button
+            onClick={scrollToMainCta}
+            className="w-full py-4 text-lg font-bold rounded-xl bg-accent-gold hover:bg-accent-gold/90 transition-colors flex items-center justify-center gap-2 animate-pulse-slow text-purple-darker"
+          >
+            <Sparkles className="h-5 w-5" />
+            QUERO RECEBER ESSA BENÇÃO
+            <ArrowRight className="h-5 w-5 ml-2" />
+          </Button>
 
           {/* Product/Book Section */}
           <div className="w-full p-4 rounded-xl bg-purple-light text-center space-y-3">
@@ -122,6 +137,15 @@ export default function FunnelStep9Page() {
               ))}
             </ul>
           </div>
+
+          <Button
+            onClick={scrollToMainCta}
+            className="w-full py-4 text-lg font-bold rounded-xl bg-accent-gold hover:bg-accent-gold/90 transition-colors flex items-center justify-center gap-2 animate-pulse-slow text-purple-darker"
+          >
+            <Sparkles className="h-5 w-5" />
+            QUERO RECEBER ESSA BENÇÃO
+            <ArrowRight className="h-5 w-5 ml-2" />
+          </Button>
 
           {/* BÔNUS EXCLUSIVOS Section */}
           <div className="w-full p-4 rounded-xl bg-purple-light text-white space-y-3">
@@ -161,32 +185,37 @@ export default function FunnelStep9Page() {
           </div>
 
           {/* OFERTA ESPECIAL Section */}
-          <div className="w-full p-4 rounded-xl bg-purple-light text-white text-center space-y-2">
-            <p className="text-accent-gold text-sm font-semibold flex items-center justify-center gap-2">
-              <Sparkles className="h-4 w-4" /> OFERTA ESPECIAL <Sparkles className="h-4 w-4" />
-            </p>
-            <p className="text-xs">Valor total se comprado separadamente:</p>
-            <p className="text-xl font-bold line-through text-gray-400">R$ 207,00</p>
-            <p className="text-sm">Oferta especial para você:</p>
-            <div className="flex items-center justify-center gap-2">
-              <p className="text-4xl font-bold text-accent-gold">R$ 37</p>
-              <span className="bg-red-500 text-white text-xs px-2 py-1 rounded-full">-82%</span>
+          <Link href="https://go.disruptybr.com.br/lad0daee9m" passHref legacyBehavior>
+            <div className="w-full p-4 rounded-xl bg-accent-gold text-purple-darker text-center space-y-2 cursor-pointer animate-pulse-slow">
+              <p className="text-sm font-semibold flex items-center justify-center gap-2">
+                <Sparkles className="h-4 w-4" /> OFERTA ESPECIAL <Sparkles className="h-4 w-4" />
+              </p>
+              <p className="text-xs">Valor total se comprado separadamente:</p>
+              <p className="text-xl font-bold line-through text-gray-600">R$ 207,00</p>
+              <p className="text-sm">Oferta especial para você:</p>
+              <div className="flex items-center justify-center gap-2">
+                <p className="text-4xl font-bold">R$ 37</p>
+                <span className="bg-red-500 text-white text-xs px-2 py-1 rounded-full">-82%</span>
+              </div>
+              <p className="text-xs">ou 12x de R$ 3,70</p>
+              <p className="text-xs flex items-center justify-center gap-1">
+                <Sparkles className="h-3 w-3" /> Clique aqui para garantir
+              </p>
+              <p className="text-xs text-white flex items-center justify-center gap-1 mt-2 bg-red-500 px-2 py-1 rounded-md font-bold">
+                <Flame className="h-3 w-3" /> Apenas 13 vagas com este preço — encerra hoje!
+              </p>
             </div>
-            <p className="text-xs">ou 12x de R$ 3,70</p>
-            <p className="text-xs text-accent-gold flex items-center justify-center gap-1">
-              <Sparkles className="h-3 w-3" /> Clique aqui para garantir
-            </p>
-            <p className="text-xs text-red-400 flex items-center justify-center gap-1 mt-2">
-              <Flame className="h-3 w-3" /> Restam apenas 13 Combos por este preço especial!
-            </p>
-          </div>
+          </Link>
 
           {/* Main Call-to-Action Button */}
           <Link href="https://go.disruptybr.com.br/lad0daee9m" passHref legacyBehavior>
-            <Button className="w-full py-6 text-lg font-bold rounded-xl bg-accent-gold hover:bg-accent-gold/90 transition-colors flex items-center justify-center gap-2 animate-pulse-slow text-purple-darker">
+            <Button
+              ref={mainCtaRef} // Attach the ref here
+              className="w-full py-6 text-lg font-bold rounded-xl bg-accent-gold hover:bg-accent-gold/90 transition-colors flex items-center justify-center gap-2 animate-pulse-slow text-purple-darker"
+            >
               <Heart className="h-5 w-5" />
               <Flame className="h-5 w-5" />
-              EU QUERO PARTICIPAR!
+              SIM! QUERO GARANTIR MEU LUGAR NA CORRENTE DE FÉ
               <ArrowRight className="h-5 w-5 ml-2" />
             </Button>
           </Link>

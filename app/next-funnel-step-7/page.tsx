@@ -11,9 +11,9 @@ export default function FunnelStep7Page() {
   const router = useRouter()
 
   const options = [
-    "Sim, quero meu Lugar de Fé AGORA",
-    "Sim, mas preciso de orientação passo-a-passo",
-    "Estou insegura, mas disposta a tentar",
+    "❤️ Sim, quero meu Lugar de Fé AGORA",
+    "🔥 Sim, mas preciso de orientação passo-a-passo",
+    "🙏 Estou insegura, mas disposta a tentar",
   ]
 
   const handleOptionClick = (index: number) => {
@@ -37,6 +37,10 @@ export default function FunnelStep7Page() {
             <Sparkles className="h-5 w-5" />
           </div>
           <p className="text-sm font-semibold text-accent-gold leading-relaxed">Pergunta 7 de 9</p>
+          {/* Texto informativo acima da barra de progresso */}
+          <p className="text-xs text-center text-white leading-relaxed">
+            Faltam apenas 2 perguntas para você descobrir seu presente espiritual.
+          </p>
           <div className="w-full h-1 bg-purple-light rounded-full">
             <div className="h-full w-[77.77%] bg-accent-gold rounded-full" /> {/* Progress for 7/9 */}
           </div>
@@ -45,6 +49,10 @@ export default function FunnelStep7Page() {
           <h2 className="text-xl font-bold text-center mt-4">
             Você está pronta para aceitar o <br /> chamado de São Miguel Arcanjo?
           </h2>
+          {/* Frase motivacional abaixo do título */}
+          <p className="text-sm text-center leading-relaxed text-red-400 font-bold">
+            Fique firme, a resposta que você busca pode chegar hoje
+          </p>
 
           {options.map((text, index) => (
             <Button

@@ -8,24 +8,38 @@ import { Heart, Sparkles, Plus, Shield, Zap } from "lucide-react"
 
 export default function FunnelStep8Page() {
   const [progress, setProgress] = useState(0)
+  const [progressMessage, setProgressMessage] = useState("") // New state for progress messages
   const router = useRouter()
 
   useEffect(() => {
     // Simulate progress
     const interval = setInterval(() => {
       setProgress((prev) => {
-        if (prev < 64) {
-          return prev + 1
+        const newProgress = prev + 1
+        if (newProgress <= 100) {
+          // Ensure progress doesn't exceed 100
+          // Update progress message based on percentage
+          if (newProgress < 25) {
+            setProgressMessage("Confirmando sua vaga...")
+          } else if (newProgress < 50) {
+            setProgressMessage("Consultando os anjos...")
+          } else if (newProgress < 75) {
+            setProgressMessage("Bênção quase pronta...")
+          } else if (newProgress <= 100) {
+            // Changed to <= 100 to ensure final message
+            setProgressMessage("Mensagem encontrada!")
+          }
+          return newProgress
         }
         clearInterval(interval)
         return prev
       })
-    }, 50) // Update every 50ms
+    }, 30) // Update every 30ms for faster progress
 
     // Simulate loading and navigate after a delay
     const timer = setTimeout(() => {
       router.push("/next-funnel-step-9")
-    }, 3000) // Navigate after 3 seconds
+    }, 3500) // Navigate after 3.5 seconds (adjusted for faster progress)
 
     return () => {
       clearInterval(interval)
@@ -46,16 +60,19 @@ export default function FunnelStep8Page() {
             <Plus className="h-5 w-5" />
             <Sparkles className="h-5 w-5" />
           </div>
-          <h1 className="text-xl font-bold text-center leading-relaxed mt-4 text-accent-gold">Verificando vagas...</h1>
-          <p className="text-sm text-accent-gold text-center leading-relaxed">Personalizando sua jornada espiritual</p>
+          <h1 className="text-xl font-bold text-center leading-relaxed mt-4 text-accent-gold">
+            Reservando seu lugar na Corrente de Oração...
+          </h1>
+          <p className="text-sm text-accent-gold text-center leading-relaxed">
+            Preparando a mensagem que São Miguel tem para você
+          </p>
         </CardHeader>
         <CardContent className="flex flex-col items-center p-6 pt-0 space-y-6">
           <div className="flex items-center justify-center space-x-6 mt-4">
-            <Shield className="h-8 w-8 text-accent-gold" />
-            <Heart className="h-8 w-8 text-accent-gold" />
-            <Zap className="h-8 w-8 text-accent-gold" />
+            <Shield className="h-8 w-8 text-accent-gold animate-pulse-slow" /> {/* Added animation */}
+            <Heart className="h-8 w-8 text-accent-gold animate-pulse-slow" /> {/* Added animation */}
+            <Zap className="h-8 w-8 text-accent-gold animate-pulse-slow" /> {/* Added animation */}
           </div>
-
           <div className="w-full h-2 bg-purple-light rounded-full mt-4">
             <div
               className="h-full bg-accent-gold rounded-full transition-all duration-500 ease-out"
@@ -63,9 +80,7 @@ export default function FunnelStep8Page() {
             />
           </div>
           <p className="text-lg font-bold text-accent-gold">{progress}%</p>
-
-          <p className="text-sm text-white text-center">Consultando a sabedoria celestial...</p>
-
+          <p className="text-sm text-white text-center">{progressMessage}</p> {/* Display dynamic message */}
           <Button
             className="w-full py-4 text-sm font-medium rounded-xl bg-purple-light text-white hover:bg-purple-light/90 transition-colors flex items-center justify-center gap-2 animate-pulse-slow"
             disabled // Disable button as it's a loading screen

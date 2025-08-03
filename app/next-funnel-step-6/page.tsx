@@ -11,10 +11,10 @@ export default function FunnelStep6Page() {
   const router = useRouter()
 
   const options = [
-    "Sedenta por uma renovação urgente",
-    "Preciso de um sopro de esperança",
-    "Já tentei, mas desisti no meio do caminho",
-    "Me sinto estável, mas quero mais",
+    "❤️ Sedenta por uma renovação urgente",
+    "🔥 Preciso de um sopro de esperança",
+    "🙏 Já tentei, mas desisti no meio do caminho",
+    "✨ Me sinto estável, mas quero mais",
   ]
 
   const handleOptionClick = (index: number) => {
@@ -38,6 +38,9 @@ export default function FunnelStep6Page() {
             <Sparkles className="h-5 w-5" />
           </div>
           <p className="text-sm font-semibold text-accent-gold leading-relaxed">Pergunta 6 de 9</p>
+          <p className="text-xs text-center text-white leading-relaxed">
+            Faltam apenas 3 perguntas para você descobrir seu presente espiritual.
+          </p>
           <div className="w-full h-1 bg-purple-light rounded-full">
             <div className="h-full w-[66.66%] bg-accent-gold rounded-full" /> {/* Progress for 6/9 */}
           </div>
@@ -46,6 +49,9 @@ export default function FunnelStep6Page() {
           <h2 className="text-xl font-bold text-center mt-4">
             Como você descreveria sua conexão <br /> espiritual hoje?
           </h2>
+          <p className="text-sm text-center leading-relaxed text-red-400 font-bold">
+            NÃO DESISTA AGORA! SUA VITÓRIA ESTÁ PRÓXIMA!
+          </p>
 
           {options.map((text, index) => (
             <Button

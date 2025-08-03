@@ -11,10 +11,10 @@ export default function FunnelStep4Page() {
   const router = useRouter()
 
   const options = [
-    "Cura física para mim ou <br /> para um ente querido",
-    "Reconciliação amorosa e <br /> restauração de relacionamentos",
-    "Libertação de vícios, traumas <br /> ou bloqueios emocionais",
-    "Direção para cumprir meu <br /> propósito de vida",
+    "✨ Cura física para mim ou <br /> para um ente querido",
+    "💖 Reconciliação amorosa e <br /> restauração de relacionamentos",
+    "⛓️ Libertação de vícios, traumas <br /> ou bloqueios emocionais",
+    "🧭 Direção para cumprir meu <br /> propósito de vida",
   ]
 
   const handleOptionClick = (index: number) => {
@@ -47,6 +47,9 @@ export default function FunnelStep4Page() {
           <h2 className="text-xl font-bold text-center mt-4">
             Se pudesse pedir um milagre ao Arcanjo Miguel, qual seria?
           </h2>
+          <p className="text-sm text-center leading-relaxed text-red-400 font-bold">
+            ESCOLHA AGORA! NÃO HÁ TEMPO A PERDER PARA SUA TRANSFORMAÇÃO!
+          </p>
 
           {options.map((text, index) => (
             <Button

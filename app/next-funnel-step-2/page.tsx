@@ -11,10 +11,10 @@ export default function FunnelStep2Page() {
   const router = useRouter()
 
   const options = [
-    "Não saber como começar",
-    "Falta de disciplina",
-    "Medo de fracassar de novo",
-    "Ausência de um guia espiritual",
+    "🚫 Não saber como começar",
+    "📉 Falta de disciplina",
+    "😱 Medo de fracassar de novo",
+    "👻 Ausência de um guia espiritual",
   ]
 
   const handleOptionClick = (index: number) => {
@@ -46,6 +46,9 @@ export default function FunnelStep2Page() {
           <h2 className="text-xl font-bold text-center mt-4">
             O que mais te impede de viver 40 dias de transformação divina?
           </h2>
+          <p className="text-sm text-center leading-relaxed text-red-400 font-bold">
+            ESCOLHA AGORA! Sua transformação depende disso.
+          </p>
 
           {options.map((text, index) => (
             <Button
