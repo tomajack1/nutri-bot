@@ -46,9 +46,7 @@ export default function Component() {
             className="rounded-lg shadow-md object-contain h-auto" // Added h-auto
             priority // Added priority prop
           />
-          <div className="w-full p-3 rounded-xl bg-accent-gold text-purple-darker text-center animate-pulse-slow shadow-lg">
-            <p className="text-base font-bold">Eu prometo que você não vai se arrepender!</p>
-          </div>
+          
           <div className="w-full p-3 rounded-xl bg-purple-light text-center space-y-2">
             {" "}
             {/* Reduced p */}

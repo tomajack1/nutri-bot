@@ -211,12 +211,15 @@ export default function FunnelStep9Page() {
           <Link href="https://go.disruptybr.com.br/lad0daee9m" passHref legacyBehavior>
             <Button
               ref={mainCtaRef} // Attach the ref here
-              className="w-full py-6 text-lg font-bold rounded-xl bg-accent-gold hover:bg-accent-gold/90 transition-colors flex items-center justify-center gap-2 animate-pulse-slow text-purple-darker"
+              className="w-full py-6 text-lg font-bold rounded-xl bg-accent-gold hover:bg-accent-gold/90 transition-colors flex flex-col items-center justify-center gap-1 animate-pulse-slow text-purple-darker"
             >
-              <Heart className="h-5 w-5" />
-              <Flame className="h-5 w-5" />
-              SIM! QUERO GARANTIR MEU LUGAR NA CORRENTE DE FÉ
-              <ArrowRight className="h-5 w-5 ml-2" />
+              <div className="flex items-center gap-2">
+                <Heart className="h-5 w-5" />
+                <Flame className="h-5 w-5" />
+                <span>SIM! QUERO GARANTIR MEU LUGAR</span>
+                <ArrowRight className="h-5 w-5 ml-2" />
+              </div>
+              <span className="text-sm">NA CORRENTE DE FÉ</span>
             </Button>
           </Link>
           <p className="text-xs text-white text-center flex items-center justify-center gap-1">
