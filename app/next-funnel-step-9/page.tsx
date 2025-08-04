@@ -185,7 +185,7 @@ export default function FunnelStep9Page() {
           </div>
 
           {/* OFERTA ESPECIAL Section */}
-          <Link href="https://go.disruptybr.com.br/lad0daee9m" passHref legacyBehavior>
+          <Link href="https://go.disruptybr.com.br/oiuxh" passHref legacyBehavior>
             <div className="w-full p-4 rounded-xl bg-accent-gold text-purple-darker text-center space-y-2 cursor-pointer animate-pulse-slow">
               <p className="text-sm font-semibold flex items-center justify-center gap-2">
                 <Sparkles className="h-4 w-4" /> OFERTA ESPECIAL <Sparkles className="h-4 w-4" />
@@ -194,13 +194,10 @@ export default function FunnelStep9Page() {
               <p className="text-xl font-bold line-through text-gray-600">R$ 207,00</p>
               <p className="text-sm">Oferta especial para você:</p>
               <div className="flex items-center justify-center gap-2">
-                <p className="text-4xl font-bold">R$ 37</p>
-                <span className="bg-red-500 text-white text-xs px-2 py-1 rounded-full">-82%</span>
+                <p className="text-4xl font-bold">R$ 29,90</p>
+                <span className="bg-red-500 text-white text-xs px-2 py-1 rounded-full">-86%</span>
               </div>
-              <p className="text-xs">ou 12x de R$ 3,70</p>
-              <p className="text-xs flex items-center justify-center gap-1">
-                <Sparkles className="h-3 w-3" /> Clique aqui para garantir
-              </p>
+              <p className="text-xs">ou 12x de R$ 2,99</p>
               <p className="text-xs text-white flex items-center justify-center gap-1 mt-2 bg-red-500 px-2 py-1 rounded-md font-bold">
                 <Flame className="h-3 w-3" /> Apenas 13 vagas com este preço — encerra hoje!
               </p>
@@ -208,7 +205,7 @@ export default function FunnelStep9Page() {
           </Link>
 
           {/* Main Call-to-Action Button */}
-          <Link href="https://go.disruptybr.com.br/lad0daee9m" passHref legacyBehavior>
+          <Link href="https://go.disruptybr.com.br/oiuxh" passHref legacyBehavior>
             <Button
               ref={mainCtaRef} // Attach the ref here
               className="w-full py-6 text-lg font-bold rounded-xl bg-accent-gold hover:bg-accent-gold/90 transition-colors flex flex-col items-center justify-center gap-1 animate-pulse-slow text-purple-darker"
