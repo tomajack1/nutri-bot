@@ -20,7 +20,7 @@ export default function FunnelStep2Page() {
   const handleOptionClick = (index: number) => {
     setSelectedOption(index)
     setTimeout(() => {
-      router.push("/next-funnel-step-3")
+      router.push("/next-funnel-step-4") // Changed navigation from /next-funnel-step-3 to /next-funnel-step-4
     }, 300) // 300ms delay for effect
   }
 

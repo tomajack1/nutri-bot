@@ -38,7 +38,7 @@ export default function FunnelStep8Page() {
 
     // Simulate loading and navigate after a delay
     const timer = setTimeout(() => {
-      router.push("/next-funnel-step-9")
+      router.push("/next-funnel-step-9") // Navigate to /next-funnel-step-9 again
     }, 3500) // Navigate after 3.5 seconds (adjusted for faster progress)
 
     return () => {

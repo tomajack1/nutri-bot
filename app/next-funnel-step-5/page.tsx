@@ -37,20 +37,14 @@ export default function FunnelStep5Page() {
           </p>
         </CardHeader>
         <CardContent className="flex flex-col items-center p-6 pt-0 space-y-4 pb-20">
-          {/* Testimonial Images */}
+          {/* Testimonial Image */}
           <Image
-            src="/images/comentario-de-gratidao.png"
-            alt="Depoimento de Lucas Ferreira: A Quaresma de São Miguel Arcanjo me salvou da ansiedade e do desespero."
-            width={300} // Reduced width
-            height={150} // Reduced height
+            src="/images/whatsapp-image-2025-08-03.jpeg"
+            alt="Depoimentos de gratidão e fé de várias pessoas"
+            width={350} // Ajustado para um tamanho que se encaixe bem
+            height={450} // Ajustado para um tamanho que se encaixe bem
             className="w-full h-auto rounded-xl object-contain"
-          />
-          <Image
-            src="/images/testemunho-de-fe.png"
-            alt="Depoimento de Fernanda Souza: Fiz a Quaresma de São Miguel Arcanjo com fé... e minha vida mudou completamente."
-            width={300} // Reduced width
-            height={150} // Reduced height
-            className="w-full h-auto rounded-xl object-contain"
+            priority
           />
 
           <Button
